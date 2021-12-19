@@ -2,7 +2,7 @@ import React from 'react'
 
 import SHOP_DATA from './shop.data.js'
 
-import CollectionPreview from '../../preview-collection/collection-preview.component'
+import CollectionPreview from '../../components/collection-previev/collection-preview.component'
 
 import './shop.component.scss'
 
