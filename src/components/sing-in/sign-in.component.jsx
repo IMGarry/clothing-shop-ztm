@@ -1,25 +1,25 @@
-import React from 'react'
-
+import React from "react";
+import './sign-in.styles.scss';
 class SignIn extends React.Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
-      email: '',
-      password: '',
-    }
+      email: "",
+      password: "",
+    };
     // this.onSubmit = this.onSubmit.bind(this)
   }
 
-  onSubmit = event => {
+  onSubmit = (event) => {
     event.preventDefault();
-    this.setState({email:'', password:''})
-  }
+    this.setState({ email: "", password: "" });
+  };
 
-  handleChange = event => {
-      const {value, name} = event.target
-      this.setState({[name] : value})
-  }
+  handleChange = (event) => {
+    const { value, name } = event.target;
+    this.setState({ [name]: value });
+  };
 
   render() {
     return (
@@ -28,21 +28,29 @@ class SignIn extends React.Component {
         <span className="">Sign in with your password</span>
 
         <form onSubmit={this.onSubmit}>
+          <input
+            name="email"
+            type="email"
+            value={this.state.email}
+            required
+            onChange={this.handleChange}
+          />
+          <label htmlFor="email">Email</label>
 
-            <input name="email" type="email" value={this.state.email} required onChange={this.handleChange}/>
-            <label htmlFor="email">Email</label>
-            
-            <input name="password" type="password" value={this.state.password} required onChange={this.handleChange}/>
-            <label htmlFor="password">Password</label>
+          <input
+            name="password"
+            type="password"
+            value={this.state.password}
+            required
+            onChange={this.handleChange}
+          />
+          <label htmlFor="password">Password</label>
 
-            <input name="submit" type="submit" value="Submit Form"/>
-            
-
-
+          <input name="submit" type="submit" value="Submit Form" />
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default SignIn
+export default SignIn;
