@@ -1,12 +1,11 @@
 import React from 'react'
-import './sign-in-and-sing-up.styles.scss'
 import SignIn from '../../components/sing-in/sign-in.component'
+import './sign-in-and-sing-up.styles.scss'
 
 const SignInAndSingUpPage = () => (
-  <div className="sign-in-and-sing-up">
-      SING IN
-      <SignIn/>
-      </div>
+  <div className="sign-in-and-sign-up">
+    <SignIn />
+  </div>
 )
 
 export default SignInAndSingUpPage
